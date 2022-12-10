@@ -1,7 +1,9 @@
 #include <iostream>
 using namespace std;
+
 const char empty_pixel = '.';
 const char filled_pixel = '#';
+
 const int canvas_size = 40;
 
 void init_canvas(char canvas[][canvas_size])
@@ -30,11 +32,12 @@ void print_canvas(char canvas[][canvas_size])
 
 void linie(int x1, int y1, int x2, int y2, char canvas[][canvas_size])
 {
-
-    if (x2 == x1 + 1 || x2 == x1 - 1 && y2 == y1 + 1 || y2 == y1 - 1)
+    
+    if ((x1 + 1 == x2 && y1 == y2) || (x1 - 1 == x2 && y1 == y2) || (y1 + 1 == y2 && x1 + 1 == x2) || (y1 - 1 == y2 && x1 - 1 == x2)||(y1-1== y2 && x1 == x2)||(y1+1==y2 && x1 == x2))
     {
         canvas[x1][y1] = filled_pixel;
         canvas[x2][y2] = filled_pixel;
+        
     }
     else
     {
