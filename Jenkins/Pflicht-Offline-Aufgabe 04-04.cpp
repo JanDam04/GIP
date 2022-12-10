@@ -10,7 +10,7 @@ int main()
     cin >> n;
     cout << "Bitte geben Sie die Hoehe des Parallelogramms ein: ? ";
     cin >> c;
-    
+
     for (int i = 0; i < c; i++)
     {
 
@@ -46,6 +46,7 @@ int main()
             }
     }
     cout << endl;
+    cout << "\n";
     system("pause");
     return 0;
 }

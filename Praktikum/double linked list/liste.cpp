@@ -110,14 +110,14 @@ void in_liste_einfuegen(TListenKnoten *&anker, int wert_neu, int vor_wert)
         do
         {
 
-            if (ptr->next == nullptr && c == 0 && ptr->data != vor_wert && b == 0)
+            if (ptr->next == nullptr && ptr->data != vor_wert)
             {
 
                 neuer_eintrag->next = nullptr;
 
                 ptr->next = neuer_eintrag;
                 neuer_eintrag->prev = ptr;
-                b = 1;
+                break;
             }
 
             if (ptr->data == vor_wert)
@@ -142,20 +142,10 @@ void in_liste_einfuegen(TListenKnoten *&anker, int wert_neu, int vor_wert)
                     neuer_eintrag->next = ptr;
                 }
 
-                c = 1;
-
                 break;
             }
             ptr = ptr->next;
         } while (ptr != nullptr);
-
-        /*if (c == 0)
-        {
-            std::cout << "check3" << std::endl;
-            neuer_eintrag->next = nullptr;
-            neuer_eintrag->prev = ptr;
-            ptr->next = neuer_eintrag;
-        }*/
     }
 }
 void aus_liste_loeschen(TListenKnoten *&anker, int wert)

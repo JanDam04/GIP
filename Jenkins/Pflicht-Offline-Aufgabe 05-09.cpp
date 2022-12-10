@@ -3,37 +3,36 @@
 
 using namespace std;
 
-string trimme(std::string s)
+string trimme(string s)
 {
     string s_t = "";
-    char ch = ' ';
+    int b = 0;
     int d = 0;
+    if (s.length() == 0)
+        return s_t;
+    int c = s.length() - 1;
     for (int i = 0; i < s.length(); i++)
     {
-
         if (s.at(i) != '+')
         {
-
             d = i;
             break;
         }
     }
-    int ce = 0;
-    int size = s.length();
-    for (int i = size - 1; i >= 0; i--)
+    for (int i = s.length() - 1; i > 0; i--)
     {
         if (s.at(i) != '+')
         {
-            ce = i;
+            b = i + 1;
             break;
         }
     }
 
-    for (int i = 0; i < ce - d + 1; i++)
+    for (int i = d; i < b; i++)
     {
-
-        s_t += s.at(i + d);
+        s_t += s.at(i);
     }
+    
 
     return s_t;
 }
