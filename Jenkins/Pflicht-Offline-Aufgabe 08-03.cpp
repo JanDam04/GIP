@@ -88,3 +88,4 @@ int main()
     cout << "Ergebnis my_strconcat(): " << sum << endl;
     system("pause");
     return 0;
+}
