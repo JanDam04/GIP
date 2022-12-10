@@ -71,3 +71,4 @@ int main()
     cout << "Ergebnis my_strconcat2(): " << my_strconcat2(ch, ch_2, c) << endl;
     system("pause");
     return 0;
+}
