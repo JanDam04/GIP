@@ -32,7 +32,7 @@ string trimme(string s)
     {
         s_t += s.at(i);
     }
-    
+
 
     return s_t;
 }

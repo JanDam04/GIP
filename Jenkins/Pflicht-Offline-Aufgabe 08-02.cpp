@@ -35,4 +35,3 @@ int main()
     cout << "Ergebnis my_strcmp(): " << sum << endl;
     system("pause");
     return 0;
-}
