@@ -5,7 +5,8 @@ using namespace std;
 
 void spalte_ab_erstem(char zc, string eingabe, string &e_t, string &z_t)
 {
-    int d;
+    int d = 0;
+    int c = 0;
     for (int i = 0; i < eingabe.length(); i++)
     {
 
@@ -16,16 +17,17 @@ void spalte_ab_erstem(char zc, string eingabe, string &e_t, string &z_t)
             break;
         }
         e_t += eingabe.at(i);
+        if (i == eingabe.length() - 1)
+            c = 1;
     }
-    if (d == 0)
-        z_t = "";
+    if (d == 0 && eingabe.at(d) != zc)
+        d--;
 
-    else
+    if (c == 1)
+        return;
+    for (int i = 0; i < eingabe.length() - d - 1; i++)
     {
-        for (int i = 0; i < eingabe.length() - d - 1; i++)
-        {
-            z_t += eingabe.at(i + d + 1);
-        }
+        z_t += eingabe.at(i + d + 1);
     }
 }
 
