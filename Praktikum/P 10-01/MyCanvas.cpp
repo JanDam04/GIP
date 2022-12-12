@@ -21,10 +21,7 @@ std::string MyCanvas::to_string() const
             sum += "\n";
         }
 
-        if (canvas_array_ptr[i] != '.')
-            sum += canvas_array_ptr[i];
-        else
-            sum += " ";
+        sum += canvas_array_ptr[i];
     }
     sum += "\n";
 
